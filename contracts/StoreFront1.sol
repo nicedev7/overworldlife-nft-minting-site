@@ -162,6 +162,7 @@ contract StoreFront2 is ERC721("MyNFT","TNFT"),ERC721Enumerable{
 	function recoverSigner(bytes32 _ethSignedMessageHash, bytes memory _signature) internal pure returns (address) {
 		(bytes32 r, bytes32 s, uint8 v) = splitSignature(_signature);
 		return ecrecover(_ethSignedMessageHash, v, r, s);
+		// please 
 	}
 	
 	function splitSignature(bytes memory sig) internal pure returns (bytes32 r,bytes32 s,uint8 v) {
